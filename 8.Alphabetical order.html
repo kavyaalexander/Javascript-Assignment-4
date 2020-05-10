@@ -1,0 +1,37 @@
+<!-- Write a JavaScript program using for…in to read the objects from an array entered by an user and to arrange it 
+    in alphabetical order. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetical Order</title>
+</head>
+
+<body>
+    <h1>Q.8)Write a JavaScript program using for…in to read the objects from an array entered by an user and to arrange it in alphabetical order.</h1>
+    <label for="name">Enter the Name of Students:</label>
+    <input type="text" id="name" name="name" required>
+    <button onclick="students()">Click</button>
+    <h2 id="result"></h2>
+    <script>
+        function students() {
+            var names = [];
+            names = document.getElementById("name").value;
+            var lists = names.split(',');
+            for (var i = 0; i < lists.length; i++) {
+                for (var j = i + 1; j < lists.length; j++) {
+                    if (lists[i].toUpperCase() > lists[j].toUpperCase()) {
+                        var a = lists[i];
+                        lists[i] = lists[j];
+                        lists[j] = a;
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = lists;
+        }
+    </script>
+</body>
+
+</html>

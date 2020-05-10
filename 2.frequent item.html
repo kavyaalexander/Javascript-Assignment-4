@@ -1,0 +1,45 @@
+<!-- Write a javascript program to find the most frequent item of an array. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequent Item of an Array</title>
+
+</head>
+
+<body>
+    <h1>Q.2) Write a JavaScript program to find the most frequent item of an array.</h1>
+    <label for="array">Enter elements in an array:</label>
+    <input type="text" id="input" name="input1" required>
+
+    <input type="button" onclick="frequent()" value="Check">
+    <h2 id="head"></h2>
+    <script>
+        function frequent() {
+            var array = document.getElementById("input").value;
+            var arr = array.split(",");
+            // var arr = [4, 5, 'k', 'k', 'k', 2, 3, '5', 3, 'k', 2, 'k ', 9, 3];
+            var ml = 1; //max.length
+            var m = 0;
+            var item;
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i; j < arr.length; j++) {
+                    if (arr[i] == arr[j])
+                        m++;
+                    if (ml < m) {
+                        ml = m;
+                        item = arr[i];
+                    }
+
+                }
+                m = 0;
+
+            }
+            head.innerHTML = "Array is [ " + arr + "] " + " " + "& the " + " " + "Most Frequent item in this array is " + item + ". ";
+        }
+    </script>
+</body>
+
+</html>

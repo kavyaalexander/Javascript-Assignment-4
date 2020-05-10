@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Larger</title>
+</head>
+
+<body>
+    <h1>Q.7) Write a JavaScript program that accept two integers and display the larger using findLarge() function.</h1>
+    <label for="input_1">Enter First Integer:</label><br>
+    <input type="number" id="firstInput" name="num1" required><br><br>
+    <label for="input_2">Enter Second Integer:</label><br>
+    <input type="number" id="secondInput" name="num2" required><br><br>
+
+
+    <button onclick="findLarge()">Check</button>
+    <h2 id="demo"></h2>
+
+    <script>
+        function findLarge() {
+            var input1 = document.getElementById("firstInput").value;
+            var input2 = document.getElementById("secondInput").value;
+
+
+            if (input1 > 0 && input2 > 0 && input1 > input2) {
+                demo.innerHTML = "Largest integer is" + " " + input1;
+            } else if (input1 > 0 && input2 > 0 && input1 < input2) {
+                demo.innerHTML = "Largest integer is" + " " + input2;
+            } else if (input1 < 0 && input2 < 0 && input1 < input2) {
+                demo.innerHTML = "Largest integer is" + " " + input1;
+            } else if (input1 < 0 && input2 < 0 && input1 > input2) {
+                demo.innerHTML = "Largest integer is" + " " + input2;
+            } else if (input1 <= 0 && input2 >= 0 && input1 < input2) {
+                demo.innerHTML = "Largest integer is" + " " + input2;
+            } else if (input1 >= 0 && input2 <= 0 && input1 > input2) {
+                demo.innerHTML = "Largest integer is" + " " + input1;
+
+            } else if (input1 == "" && input2 == "") {
+                demo.innerHTML = "Please enter valid number";
+            } else if (input1 === input2) {
+                demo.innerHTML = "Both numbers are same";
+            }
+        }
+    </script>
+</body>
+
+</html>

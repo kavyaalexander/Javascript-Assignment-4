@@ -1,0 +1,48 @@
+<!-- Write a JavaScript function to get an array and to read the first element of an array.Check whether it is prime or not. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime number or not</title>
+
+</head>
+
+<body>
+    <h1>Q.1) Write a JavaScript function to get an array and to read the first element of an array. Check whether it is prime or not.</h1>
+    <label for="array">Enter elements in an array:</label>
+    <input type="text" id="userinput" name="input1" required>
+
+    <input type="button" onclick="testprime()" value="Check">
+    <h2 id="check"></h2>
+    <h3 id="prin">
+    </h3>
+
+    <script>
+        function testprime() {
+            var number = [];
+
+            number = document.getElementById("userinput").value;
+            var num = number.split(",");
+            var n = num[0];
+
+            document.getElementById("check").innerHTML = "The first element of an array is:" + n;
+            var f = 0;
+
+            for (var i = 1; i <= n; i++) {
+                if (n % i === 0) {
+
+                    f++;
+                }
+                if (f === 2) {
+                    prin.innerHTML = n + " " + "is a prime no.";
+                } else {
+                    prin.innerHTML = n + " " + "is not a prime no.";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

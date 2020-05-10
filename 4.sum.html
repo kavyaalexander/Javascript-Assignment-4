@@ -1,0 +1,33 @@
+<!-- Write a JavaScript program to find the sum of squares of the elements of an array. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Squares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Q.4) Write a JavaScript program to find the sum of squares of the elements of an array.</h1>
+    <label for="input">Enter an Array of elements:</label>
+    <input type="text" id="array1" name="input" required>
+    <button onclick="sum_square();">click</button>
+    <h2 id="output">
+    </h2>
+
+    <script>
+        function sum_square() {
+            var array = document.getElementById("array1").value;
+            var arr = array.split(",");
+            var sum = 0;
+            var i = arr.length;
+            while (i--)
+                sum += Math.pow(arr[i], 2);
+            document.getElementById("output").innerHTML = "The sum of squares of the elements of an array is: " + " " + sum;
+        }
+    </script>
+</body>
+
+</html>

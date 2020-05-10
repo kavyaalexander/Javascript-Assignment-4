@@ -1,0 +1,38 @@
+<!-- Write a JS program which accept a string as input & swap the case of each character. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Characters</title>
+
+</head>
+
+<body>
+    <h1>Q.3) Write a JavaScript program which accept a string as input and swap the case of each character.</h1>
+
+    <label for="input">Enter input text:</label>
+    <input type="text" id="swaptext" name="text" required>
+    <button onclick="swapStr();">Swap</button>
+    <h3 id="output"></h3>
+
+
+    <script>
+        function swapStr() {
+            var str = document.getElementById("swaptext").value;
+            var swapString = " ";
+            for (var i = 0; i < str.length; i++) {
+
+                if (str.charAt(i) === str.charAt(i).toLowerCase()) {
+                    swapString += str.charAt(i).toUpperCase();
+                } else if (str.charAt(i) === str.charAt(i).toUpperCase()) {
+                    swapString += str.charAt(i).toLowerCase();
+                }
+            }
+            document.getElementById("output").innerHTML = swapString;
+        }
+    </script>
+</body>
+
+</html>
